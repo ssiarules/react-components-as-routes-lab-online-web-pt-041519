@@ -11,7 +11,7 @@ const link = {
   color: 'white',
 }
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div className='navbar'>
       <NavLink to='/'
@@ -46,4 +46,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
