@@ -1,17 +1,24 @@
 import React from 'react';
 import { directors } from '../data';
 
-class Directors extends React.Component {
-  render(){
-    return (
+const Directors = () => {
+  return (
     <div>
-      <h1> Directors Page </h1>
-        <h2> Director Name </h2>
-      <ul> Director Movies </ul>
+      <h1>Directors Page</h1>
+      {directors.map(director =>
+        <div>
+          <h3>Name: {director.name}</h3>
+          <p>Movies:</p>
+          <ul>
+            {director.movies.map(movie => {
+              return <li>{movie}</li>
+            })}
+          </ul>
+        </div>
+      )}
     </div>
-);
-  }
- }
+  );
+}
 
 
 
