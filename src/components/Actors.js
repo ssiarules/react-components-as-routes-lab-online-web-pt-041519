@@ -4,7 +4,7 @@ import { actors } from '../data';
 const Actor = ({ name, movies}) =>{
 <div className='actor' key={name}>
   <h1> Name: {name} </h1>
-    <p1> Movies: </p1>
+    <p> Movies: </p>
       <ul>
         {movies.map(movieData => <li> {movieData}</li>)}
       </ul>
