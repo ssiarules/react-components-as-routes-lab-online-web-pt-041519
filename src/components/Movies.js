@@ -1,18 +1,23 @@
 import React from 'react';
 import { movies } from '../data';
 
-class Movies extends React.Component{
-
-  render(){
-      return (
-     <div>
-        <h1> Movies Page </h1>
-        <h2> Movie Title </h2>
-        <h3>MovieTime </h3>
-          <ul> Genre </ul>
-     </div>
-   );
-  }
+const Movies = () => {
+  return (
+    <div>
+      <h1>Movies Page</h1>
+      {movies.map(movie =>
+        <div>
+          <h3>Name: {movie.title}</h3>
+          <p> Time: {movie.time}</p>
+          <p> genre</p>
+          <ul>
+            {movie.genres.map(genre => {
+              return <li>{genre}</li>
+            })}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
 }
-
 export default Movies;
