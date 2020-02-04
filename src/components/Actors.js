@@ -1,25 +1,24 @@
 import React from 'react';
 import { actors } from '../data';
 
-const Actor = ({ name, movies}) =>{
-<div className='actor' key={name}>
-  <h1> Name: {name} </h1>
-    <p> Movies: </p>
-      <ul>
-        {movies.map(movieData => <li> {movieData}</li>)}
-      </ul>
-</div>
-}
-
 const Actors = () => {
- return (
+  return (
     <div>
       <h1>Actors Page</h1>
-    {actors.map(Actor)}
+      {actors.map(actor =>
+        <div>
+          <h3>Name: {actor.name}</h3>
+          <p>Movies:</p>
+          <ul>
+            {actor.movies.map(movie => {
+              return <li>{movie}</li>
+            })}
+          </ul>
+        </div>
+      )}
     </div>
   );
-  }
-
+}
 
 
 export default Actors;
